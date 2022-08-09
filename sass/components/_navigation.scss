@@ -1,0 +1,63 @@
+/*
+  |==============================
+  | Nav style
+  |==============================
+*/
+
+
+.nav {
+    @include flexbox(flex, center, null, null);
+
+    &__list {
+        display: flex;
+    }
+
+    &__logo {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: 0;
+        margin-right: 93px;
+    }
+
+}
+
+
+.nav__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-left: 0;
+    }
+}
+
+
+
+.nav__link {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(14px, 500, 16px, 0.02em);
+    color: inherit;
+    transition: color var(--transition-duration) var(--transition-timing-function);
+
+    &--current {
+            color: var(--accent-txt-cl, #2196f3);
+        }
+
+    &--current::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        min-width: 100%;
+        min-height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-txt-cl, #2196f3);
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl, #2196f3);
+        fill: var(--accent-icon-bg-cl, #2196f3);
+    }
+}

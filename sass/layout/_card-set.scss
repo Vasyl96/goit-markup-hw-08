@@ -1,0 +1,15 @@
+/*
+  |==============================
+  | Card set style
+  |==============================
+*/
+
+.card-set-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+
+.card-set-items {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}

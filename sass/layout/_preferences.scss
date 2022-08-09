@@ -1,0 +1,45 @@
+/*
+  |==============================
+  | Preferences style
+  |==============================
+*/
+
+.preferences {
+    padding: 90px 0 90px;
+
+    &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--indent);
+        }
+    
+    &__item {
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    }
+
+    &__box {
+        @include flexbox(flex, center, center, null);
+        height: 120px;
+        border-radius: 4px;
+        background-color: var(--box-bg-cl, #f5f4fa);
+    }
+
+    &__box--bottom {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include font(14px, 700, 16px, 0.03em);
+        text-transform: uppercase;
+    }
+
+    &__title--bottom {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        @include font(14px, 400, 24px, 0.03em);
+        max-width: 270px;
+        color: var(--gray-txt-cl, #757575);
+    }
+}

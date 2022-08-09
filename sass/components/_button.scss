@@ -1,0 +1,53 @@
+/*
+  |==============================
+  | Button style
+  |==============================
+*/
+
+// Button style universal
+.btn {
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+}
+
+//  Button blue
+.btn-blue {
+    padding: 10px 28px;
+    min-width: 200px;
+    @include font(16px, 700, 30px, 0.06em);
+    color: var(--white-txt-cl, #ffffff);
+    background-color: var(--btn-blue-bg-cl, #2196f3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--white-txt-cl, #ffffff);
+        background-color: var(--accent-btn-blue-bg-cl, #188ce8);
+    }
+}
+
+
+// Button silver 
+.btn-silver {
+    padding: 6px 22px;
+    min-width: 73px;
+    @include font(16px, 500, 26px, 0.03em);
+    color: var(--white-txt-cl, #ffffff);
+    text-align: center;
+    color: inherit;
+    background-color: var(--btn-silver-bg-cl, #f5f4fa);
+    transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--white-txt-cl, #ffffff);
+        background-color: var(--accent-btn-silver-bg-cl, #2196f3);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+

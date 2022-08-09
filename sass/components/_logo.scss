@@ -1,0 +1,24 @@
+/*
+  |==============================
+  | Logo style
+  |==============================
+*/
+
+.logo {
+    align-items: center;
+    font-family: var(--secondary-fons);
+    @include font(26px, 700, 31px, 0.03em);
+    text-decoration: none;
+    color: var(--dark-logo-txt-cl, #000000);
+    transition: color var(--transition-duration) var(--transition-timing-function);
+    
+    &__label {
+            color: var(--skyblue-logo-txt-cl, #2196f3);
+        }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-cl, #2196f3);
+        fill: var(--accent-icon-bg-cl, #2196f3);
+    }
+}

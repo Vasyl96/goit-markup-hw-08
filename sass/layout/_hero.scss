@@ -1,0 +1,35 @@
+/*
+  |==============================
+  | Hero style
+  |==============================
+*/
+
+.hero {
+    margin: 0 auto;
+    padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
+    text-align: center;
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))),
+        url(../img/img-banner.jpg);
+    background-color: var(--footer-hero-bg-cl, #2f303a);
+
+    &__title {
+        margin: 0 auto 0;
+        max-width: 696px;
+        @include font(44px, 900, 60px, 0.06em);
+        text-transform: uppercase;
+        color: var(--white-txt-cl, #ffffff);
+        }
+
+    &__title--bottom {
+        margin-bottom: 30px;
+    }
+
+    &__btn-blue {
+        display: inline-block;
+    }
+}
+
+

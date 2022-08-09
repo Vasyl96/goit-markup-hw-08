@@ -1,0 +1,41 @@
+:root {
+    // Fons
+    --main-fons: 'Roboto', sans-serif;
+    --secondary-fons: 'Raleway', sans-serif;
+
+    // Text color
+    --dark-main-txt-cl: #212121;
+    --silver-txt-cl: rgba(255, 255, 255, 0.6);
+    --gray-txt-cl: #757575;
+    --white-txt-cl: #ffffff;
+    --accent-txt-cl: #2196f3;
+    --white-logo-txt-cl: #ffffff;
+    --dark-logo-txt-cl: #000000;
+    --skyblue-logo-txt-cl: #2196f3;
+    --accent-input-cl: #2196f3;
+
+    // Background-color
+    --gray-icon-bg-cl: #757575;
+    --silver-icon-bg-cl: #afb1b8;
+    --white-modal-icon-bg-cl: #ffffff;
+    --white-social-bg-cl: #ffffff;
+    --white-team-bg-cl: #ffffff;
+    --white-modal-bg-cl: #ffffff;
+    --backdrop-bg-cl: rgba(0, 0, 0, 0.2);
+    --footer-hero-bg-cl: #2f303a;
+    --team-bg-cl: #f5f4fa;
+    --btn-silver--bg-cl: #f5f4fa;
+    --accent-btn-silver-bg-cl: #2196f3;
+    --btn-blue-bg-cl: #2196f3;
+    --accent-btn-blue-bg-cl: #188ce8;
+    --accent-icon-bg-cl: #2196f3;
+    --hero-lg-bg-cl: rgba(47, 48, 58, 0.4);
+    --box-bg-cl: #f5f4fa;
+
+    // others
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-duration: 250ms;
+    --transition-delay: 600ms;
+    --indent: 30px;
+    --items: 4;
+}

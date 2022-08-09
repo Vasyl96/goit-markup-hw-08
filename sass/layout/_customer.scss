@@ -1,0 +1,40 @@
+/*
+  |==============================
+  | Customer style
+  |==============================
+*/
+
+.customer {
+    padding: 94px 0;
+
+    &__list {
+        @include flexbox(flex, null, center, null);
+        //  gap: 30px;
+        gap: var(--indent);
+    }
+
+    &__item {
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        @include flexbox(flex, center, center, null);
+        width: 170px;
+        height: 92px;
+        fill: var(--silver-icon-bg-cl, #afb1b8);
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        transition: border var(--transition-duration) var(--transition-timing-function),
+            fill var(--transition-duration) var(--transition-timing-function);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        border: 1px solid #2196f3;
+        fill: var(--accent-icon-bg-clicon-bg-cl, #2196f3);
+    }
+}

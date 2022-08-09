@@ -1,0 +1,238 @@
+/*
+  |==============================
+  | Modal style
+  |==============================
+*/
+
+// Backdrop and is-hidden start
+.backdrop.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.backdrop {
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: var(--backdrop-bg-cl, rgba(0, 0, 0, 0.2));
+    transition: opacity var(--transition-duration) var(--transition-timing-function),
+        visibility var(--transition-duration) var(--transition-timing-function);
+}
+
+
+// Modal windows start
+.modal {
+    padding: 40px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--white-modal-bg-cl, #ffffff);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform var(--transition-duration) var(--transition-timing-function),
+        opacity var(--transition-duration) var(--transition-timing-function),
+        visibility var(--transition-duration) var(--transition-timing-function);
+
+    &__btn-close {
+        @include flexbox(flex, center, center, null);
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        min-height: 30px;
+        min-width: 30px;
+        background-color: var(--white-modal-icon-bg-cl, #ffffff);
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: transform var(--transition-duration) var(--transition-timing-function),
+            opacity var(--transition-duration) var(--transition-timing-function);
+    }
+
+    &__btn-close:focus,
+    &__btn-close:hover {
+        fill: #2196f3;
+    }
+     
+    &__text {
+        display: block;
+        text-align: center;
+        @include font(20px, 700, 23px, 0.03em);
+        color: var(--dark-main-txt-cl, #212121);
+    }
+
+    &__text--bottom {
+        margin-bottom: 12px;
+    }
+
+    &__form {
+        @include flexbox(flex, center, null, column);
+        padding: 40px;
+    }
+}
+
+
+// Modal windows
+
+.form-modal {
+    @include flexbox(flex, center, null, column);
+
+    &__user-name,
+    &__user-phone,
+    &__user-email,
+    &__user-comment {
+        display: inline-block;
+        position: relative;
+        width: 448px;
+        cursor: pointer;
+    }
+
+    &__user-name--bottom,
+    &__user-phone--bottom,
+    &__user-email--bottom {
+        margin-bottom: 10px;
+    }
+
+    &__user-comment {
+        margin-bottom: 20px;
+    }
+
+    &__user-label {
+        display: block;
+        @include font(12px, 400, 14px, 0.01em);
+        color: var(--gray-txt-cl), #757575;
+        cursor: pointer;
+    }
+
+    &__user-label--bottom {
+        margin-bottom: 4px;
+    }
+
+    &__user-input {
+        padding: 12px 16px 12px 42px;
+        height: 40px;
+        width: 448px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition: border var(--transition-duration) var(--transition-timing-function);
+        cursor: pointer;
+    }
+
+    &__user-icon {
+        display: block;
+        position: absolute;
+        top: 29px;
+        left: 21px;
+        width: 18px;
+        height: 18px;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
+
+    &__user-input:focus + &__user-icon {
+        fill: #2196f3;
+    }
+
+    &__user-input:focus,
+    &__user-textarea:focus {
+        border: 1px solid #2196f3;
+        outline: transparent;
+    }
+
+    &__user-textarea {
+        resize: none;
+        height: 120px;
+        padding: 10px 16px;
+        width: 448px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition: border var(--transition-duration) var(--transition-timing-function);
+    }
+
+    &__user-textarea::placeholder {
+        @include font(12px, 400, 14px, 0.01em);
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+
+    &__user-adreement {
+        display: inline-block;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    &__user-adreement--bottom {
+        margin-bottom: 30px;
+    }
+
+    &__label-adreement {
+        display: inline-block;
+        @include font(14px, 400, 24px, 0.03em);
+        color: var(--gray-txt-cl, #757575);
+    }
+
+    &__agreement-link {
+        color: var(--accent-txt-cl, #2196f3);
+        text-decoration: underline;
+    }
+
+    &__agreement-link:focus,
+    &__agreement-link:hover {
+        color: var(--accent-btn-blue-bg-cl, #188ce8);
+        transition: color var(--transition-duration) var(--transition-timing-function);
+    }
+
+    &__label-adreement::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        bottom: 17%;
+        transform: translatey(-10%);
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid;
+        border-color: var(--dark-main-txt-cl, #212121);
+        border-radius: 2px;
+        transition: border-color var(--transition-duration) var(--transition-timing-function),
+            background-color var(--transition-duration) var(--transition-timing-function);
+        cursor: pointer;
+    }
+
+    &__checkbox-agreement:focus + &__label-adreement::before {
+        border-color: var(--accent-icon-bg-cl, #2196f3);
+    }
+
+    &__checkbox-agreement:checked + &__label-adreement::before {
+        background-image: url(../img/icon\ check.svg);
+        background-origin: border-box;
+        background-size: contain;
+        border-color: var(--accent-icon-bg-cl, #2196f3);
+        background-color: var(--accent-icon-bg-cl, #2196f3);
+    }
+
+    &__checkbox-agreement {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 52px;
+    }
+}

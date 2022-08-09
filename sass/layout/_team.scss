@@ -1,0 +1,51 @@
+/*
+  |==============================
+  | Team style
+  |==============================
+*/
+
+.team {
+    padding: 94px 0;
+    background-color: var(--team-bg-cl, #f5f4fa);
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--indent);
+    }
+
+    &__item {
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        background-color: var(--white-team-bg-cl, #ffffff);
+    }
+
+    &__text {
+        @include font(16px, 400, 19px, 0.03em);
+        text-align: center;
+        color: var(--gray-txt-cl, #757575);
+    }
+
+    &__text--bottom {
+        margin-bottom: 16px;
+    }
+
+    &__contact {
+        padding: 30px 20px;
+    }
+
+    .team__subtitle {
+        @include font(16px, 500, 19px, 0.03em);
+        text-align: center;
+    }
+
+    &__subtitle--bottom {
+        margin-bottom: 10px;
+    }
+}

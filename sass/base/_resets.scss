@@ -1,0 +1,36 @@
+
+/*
+  |==============================
+  | Reset style
+  |==============================
+*/
+
+// Reset tag indents
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+// Reset the link underline
+a {
+    text-decoration: none;
+}
+
+// Reset list markers
+ul,
+ol {
+    list-style: none;
+}
+
+// Reset display inline
+img {
+    display: block;
+}

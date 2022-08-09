@@ -1,0 +1,15 @@
+/*
+  |==============================
+  | Base styles
+  |==============================
+*/
+
+body {
+    font-family: var(--main-fons);
+    color: var(--dark-main-txt-cl, #212121);
+}
+
+// Reset scrolling in the modal window
+.no-scroll {
+    overflow: hidden;
+}

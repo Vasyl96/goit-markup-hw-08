@@ -1,0 +1,26 @@
+/*
+  |==============================
+  | Icon style
+  |==============================
+*/
+.icon-list {
+    @include flexbox(flex, null, center, null);
+    gap: 10px;
+}
+
+.icon-link {
+    @include flexbox(flex, center, center, null);
+    fill: var(--silver-icon-bg-cl, #afb1b8);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: fill var(--transition-duration) var(--transition-timing-function),
+        background-color var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--white-social-bg-cl, #ffffff);
+        background-color: var(--accent-icon-bg-clicon-bg-cl, #2196f3);
+    }
+}
+

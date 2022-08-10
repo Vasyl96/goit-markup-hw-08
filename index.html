@@ -21,11 +21,10 @@
             <nav class="nav">
                 <a class="logo nav__logo" href="https://vasyl96.github.io/goit-markup-hw-08/"><span
                         class="logo__label">Web</span>Studio</a>
-                <button class="btn-menu nav__btn-menu" type="button" aria-hidden="false" aria-controls="menu-container"
-                    data-menu-button>
-                    <svg class="btn-menu__icon 
-                                        " width="40" height="40" aria-label="Перемикач мобільного меню">
-                        <use class="btn-menu__icon-menu" href="./img/sprite.svg#icon-menu"></use>
+                <button class="btn-burger js-open-menu" type="button" aria-expanded="false"
+                    aria-controls="menu-container">
+                    <svg class="btn-burger___menu" width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <use href="./img/sprite.svg#icon-menu"></use>
                     </svg>
                 </button>
                 <ul class="nav__list">
@@ -55,16 +54,12 @@
             </ul>
         </div>
     </header>
-    <!-- Modal-menu -->
-    <div class="backdrop-menu is-hidden" data-modal>
-        <div class="menu is-open" id="menu-container" data-menu>
-            <button class="btn-menu nav__btn-menu" type="button" aria-hidden="false" aria-controls="menu-container"
-                data-menu-button>
-                <svg class="btn-menu__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
-                    <use class="btn-menu__icon-cross" href="./img/sprite.svg#icon-cross"></use>
-                </svg>
-            </button>
-        </div>
+    <div class="menu-container js-menu-container is-open" id="menu-container">
+        <button class="btn-burger js-close-menu" type="button" aria-expanded="false" aria-controls="menu-container">
+            <svg class="btn-burger__cross" width="40" height="40" aria-label="Перемикач мобільного меню">
+                <use href="./img/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
     </div>
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
@@ -412,6 +407,9 @@
         </div>
 
     </footer> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/4.0.0-beta.0/bodyScrollLock.min.js"
+        integrity="sha512-3Nm4Kyd9rUTWfh21EUrquXSPtan5lhhOFqnV7xdE9gW7+M8Y6FEyTf7NJQMwtMiCyulb6Wu6j6boo6Q79N/CPA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>

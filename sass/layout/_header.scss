@@ -7,14 +7,70 @@
 .header {
     border-bottom: 1px solid #ececec;
 
-    &__container {
-            display: flex;
-        }
+    @media screen and (max-width: 768px) {
+        &__contact-list {
+                display: none;
+            }
+    }
 
-    &__contact-list {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        &__contact-list {
+                flex-wrap: wrap;
+                margin-left: auto;
+                @include padding (21px);
+            }
+
+            &__contact-item {
+                margin-bottom: 10px;
+            }
+
+            &__contact-item:last-child {
+                margin-bottom: 0px;
+            }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        &__container {
+                display: flex;
+            }
+
+        &__contact-list {
             @include flexbox(flex, center, null, null);
             margin-left: auto;
+            justify-content: left
+        }
+
+
+        &__contact-link {
+            @include flexbox(flex, center, null, null);
+            @include font(14px, 500, 16px, 0.02em);
+            color: var(--gray-txt-cl, #757575);
+            fill: var(--gray-icon-bg-cl, #757575);
+            transition: color var(--transition-duration) var(--transition-timing-function),
+                fill var(--transition-duration) var(--transition-timing-function);
+        }
+
+        &__contact-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        &__contact-icon--right {
+            margin-right: 10px;
+        }
+
+        &__contact-link {
+
+            &:hover,
+            &:focus {
+                color: var(--accent-txt-cl, #2196f3);
+                fill: var(--accent-icon-bg-cl, #2196f3);
+            }
+        }
     }
+
+    @media screen and (min-width: 1200px) {
 
     &__contact-item {
         margin-right: 50px;
@@ -25,32 +81,9 @@
     }
 
     &__contact-link {
-        @include flexbox(flex, center, null, null);
-        @include font(14px, 500, 16px, 0.02em);
-        padding-top: 32px;
-        padding-bottom: 32px;
-        color: var(--gray-txt-cl, #757575);
-        fill: var(--gray-icon-bg-cl, #757575);
-        transition: color var(--transition-duration) var(--transition-timing-function),
-            fill var(--transition-duration) var(--transition-timing-function);
+        @include padding (32px);
     }
 
-    &__contact-icon {
-        width: 16px;
-        height: 16px;
-    }
-
-    &__contact-icon--right {
-        margin-right: 10px;
-    }
-    
-    &__contact-link {
-
-        &:hover,
-        &:focus {
-            color: var(--accent-txt-cl, #2196f3);
-            fill: var(--accent-icon-bg-cl, #2196f3);
-        }
 }
 }
 

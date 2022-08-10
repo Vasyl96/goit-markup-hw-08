@@ -43,6 +43,14 @@
     }}
 
 
+
+//Mixin for padding top and bottom
+
+@mixin padding($padding: 21px) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
 // Mixin for flexbox
 
 @mixin flexbox($type: flex, $ai: center, $jc: center, $fd: column) {

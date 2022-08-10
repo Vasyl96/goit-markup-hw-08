@@ -14,10 +14,16 @@
     height: 100%;
     background-color: red;
     transform: translate(100%, 0%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 
 &.is-open {
     transform: translate(0%, 0%);
+    visibility: visible;
+    opacity: 1;
     }
+    
 }
 
  

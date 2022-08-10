@@ -159,10 +159,15 @@ img {
   background-color: red;
   -webkit-transform: translate(100%, 0%);
           transform: translate(100%, 0%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .menu-container.is-open {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
+  visibility: visible;
+  opacity: 1;
 }
 
 .btn-burger {

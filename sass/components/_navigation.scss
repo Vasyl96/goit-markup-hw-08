@@ -4,25 +4,39 @@
   |==============================
 */
 
-.btn-menu  is {
+
+
+.btn-menu {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
     
+    & &__icon-cross {
+        display: none;
+
+    }
+
+    &.is-open &__icon-cross {
+        display: block
+    }
+
+
+    &.is-open &__icon-menu {
+        display: none
+    }
+
 }
 
-.nav {
-    
-    @include flexbox(flex, center, space-between, null);
 
-    &__btn-menu {
-        display: inline-block;
-        border: transparent;
-        background-color: var(--white-modal-icon-bg-cl, #ffffff);
-    }
+
+.nav {
+    @include flexbox(flex, center, space-between, null);
 
     &__logo {
         @include padding (16px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         &__list {
         display: none;
         }

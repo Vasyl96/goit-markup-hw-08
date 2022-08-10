@@ -19,13 +19,13 @@
     <header class="header">
         <div class="container header__container">
             <nav class="nav">
-                <a class="logo nav__logo" href="https://vasyl96.github.io/goit-markup-hw-06/"><span
+                <a class="logo nav__logo" href="https://vasyl96.github.io/goit-markup-hw-08/"><span
                         class="logo__label">Web</span>Studio</a>
-                <button class="btn-menu nav__btn-menu" type="button" aria-label="Закрити меню" aria-hidden="false"
-                    aria-controls="menu-controls">
-                    <svg class="btn-menu-icon" width="40" height="40">
-                        <use href="./img/sprite.svg#icon-menu"></use>
-                        <use href="./img/sprite.svg#icon-menu-close"></use>
+                <button class="btn-menu nav__btn-menu" type="button" aria-hidden="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg class="btn-menu__icon 
+                                        " width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <use class="btn-menu__icon-menu" href="./img/sprite.svg#icon-menu"></use>
                     </svg>
                 </button>
                 <ul class="nav__list">
@@ -55,6 +55,17 @@
             </ul>
         </div>
     </header>
+    <!-- Modal-menu -->
+    <div class="backdrop-menu is-hidden" data-modal>
+        <div class="menu is-open" id="menu-container" data-menu>
+            <button class="btn-menu nav__btn-menu" type="button" aria-hidden="false" aria-controls="menu-container"
+                data-menu-button>
+                <svg class="btn-menu__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="btn-menu__icon-cross" href="./img/sprite.svg#icon-cross"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -401,6 +412,7 @@
         </div>
 
     </footer> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

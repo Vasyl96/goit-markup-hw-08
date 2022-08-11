@@ -9,31 +9,31 @@
 
     @media screen and (max-width: 768px) {
         &__contact-list {
-                display: none;
-            }
+            display: none;
+        }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1200px) {
         &__contact-list {
-                flex-wrap: wrap;
-                margin-left: auto;
-                @include padding (21px);
-            }
+            flex-wrap: wrap;
+            margin-left: auto;
+            @include padding (21px);
+        }
 
-            &__contact-item {
-                margin-bottom: 10px;
-            }
+        &__contact-item {
+            margin-bottom: 10px;
+        }
 
-            &__contact-item:last-child {
-                margin-bottom: 0px;
-            }
+        &__contact-item:last-child {
+            margin-bottom: 0px;
+        }
     }
 
     @media screen and (min-width: 768px) {
 
         &__container {
-                display: flex;
-            }
+            display: flex;
+        }
 
         &__contact-list {
             @include flexbox(flex, center, null, null);
@@ -72,30 +72,17 @@
 
     @media screen and (min-width: 1200px) {
 
-    &__contact-item {
-        margin-right: 50px;
-    }
+        &__contact-item {
+            margin-right: 50px;
+        }
 
-    &__contact-item:last-child {
-        margin-right: 0;
-    }
+        &__contact-item:last-child {
+            margin-right: 0;
+        }
 
-    &__contact-link {
-        @include padding (32px);
-    }
+        &__contact-link {
+            @include padding (32px);
+        }
 
+    }
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-

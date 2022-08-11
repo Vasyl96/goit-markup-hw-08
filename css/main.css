@@ -150,7 +150,7 @@ img {
   |==============================
 */
 .menu-container {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -159,17 +159,19 @@ img {
   z-index: 999;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
+  transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
 }
 
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-
-.menu-container .content {
-  height: 100%;
-  background-color: #fff;
-  width: 70%;
+  opacity: 1;
+  pointer-events: visible;
+  visibility: initial;
 }
 
 .burger-menu {

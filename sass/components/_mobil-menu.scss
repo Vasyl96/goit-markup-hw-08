@@ -74,7 +74,7 @@
 
 // Menu-nav
 .menu-nav {
-  @include flexbox(flex, null, null, null);
+  @include flexbox(flex, null, null, column);
   flex-wrap: wrap;
 
   &__list {
@@ -111,7 +111,7 @@
 
 // Menu contact
 .menu-contact {
-  @include flexbox(flex, null, null, null);
+  @include flexbox(flex, null, null, column);
   flex-wrap: wrap;
 
   &__item {
@@ -119,13 +119,12 @@
   }
 
   &__item:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 64px;
   }
 
   &__link {
     @include font(24px, 500, 28px, 0.02em);
     color: var(--gray-txt-cl, #757575);
-    fill: var(--gray-icon-bg-cl, #757575);
     transition: color var(--transition-duration) var(--transition-timing-function),
       fill var(--transition-duration) var(--transition-timing-function);
   
@@ -140,5 +139,44 @@
       fill: var(--accent-icon-bg-cl, #2196f3);
     }
   }
+}
 
+// Menu social
+
+.menu-social {
+  @include flexbox(flex, null, null, null);
+
+
+  &__item {
+  padding: 0 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  &:first-child {
+      padding-left: 0;
+    }
+  
+  &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+
+  &__link {
+    @include font(18px, 500, 22px, 0.02em);
+    color: var(--accent-txt-cl, #2196f3);
+    fill: var(--gray-icon-bg-cl, #757575);
+    transition: color var(--transition-duration) var(--transition-timing-function),
+      fill var(--transition-duration) var(--transition-timing-function);
+
+    &--blue {
+      @include font(34px, null, 40px, null);
+      color: var(--accent-txt-cl, #2196f3);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-txt-cl, #2196f3);
+      fill: var(--accent-icon-bg-cl, #2196f3);
+    }
+  }
 }

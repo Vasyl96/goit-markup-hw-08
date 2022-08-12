@@ -699,6 +699,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -735,6 +739,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -742,7 +750,7 @@ img {
   margin-bottom: 32px;
 }
 .menu-contact__item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 64px;
 }
 .menu-contact__link {
   font-size: 24px;
@@ -750,7 +758,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--gray-txt-cl, #757575);
-  fill: var(--gray-icon-bg-cl, #757575);
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
 }
@@ -760,6 +767,42 @@ img {
   color: var(--accent-txt-cl, #2196f3);
 }
 .menu-contact__link:hover, .menu-contact__link:focus {
+  color: var(--accent-txt-cl, #2196f3);
+  fill: var(--accent-icon-bg-cl, #2196f3);
+}
+
+.menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu-social__item {
+  padding: 0 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu-social__item:first-child {
+  padding-left: 0;
+}
+.menu-social__item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.menu-social__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-txt-cl, #2196f3);
+  fill: var(--gray-icon-bg-cl, #757575);
+  -webkit-transition: color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+}
+.menu-social__link--blue {
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--accent-txt-cl, #2196f3);
+}
+.menu-social__link:hover, .menu-social__link:focus {
   color: var(--accent-txt-cl, #2196f3);
   fill: var(--accent-icon-bg-cl, #2196f3);
 }

@@ -67,18 +67,19 @@
 
 // Menu-contaiter
 .menu-container {
-  margin-bottom: auto;
-  padding: 48px 40px;
-  
+  @include flexbox(flex, null, null, column);
+  height: 100%;
+  padding: 48px 40px;  
 }
 
 // Menu-nav
 .menu-nav {
-  // @include flexbox(flex, null, null, column);
-    flex-wrap: wrap;
+  @include flexbox(flex, null, null, null);
+  flex-wrap: wrap;
 
   &__list {
     display: flex;
+    margin-bottom: auto;
   }
 
   &__item {
@@ -110,6 +111,7 @@
 
 // Menu contact
 .menu-contact {
+  @include flexbox(flex, null, null, null);
   flex-wrap: wrap;
 
   &__item {

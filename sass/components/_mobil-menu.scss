@@ -67,15 +67,16 @@
 
 // Menu-contaiter
 .menu-container {
-  @include flexbox(flex, null, null, column);
+  margin-bottom: auto;
   padding: 48px 40px;
   
 }
 
-
+// Menu-nav
 .menu-nav {
-  @include flexbox(flex, null, null, column);
-  
+  // @include flexbox(flex, null, null, column);
+    flex-wrap: wrap;
+
   &__list {
     display: flex;
   }
@@ -88,7 +89,7 @@
     }
     }
   
-  
+
   &__link {
       // @include padding (32px);
       @include font(40px, 500, 47px, 0.02em);
@@ -107,3 +108,35 @@
     }
 }
 
+// Menu contact
+.menu-contact {
+  flex-wrap: wrap;
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__link {
+    @include font(24px, 500, 28px, 0.02em);
+    color: var(--gray-txt-cl, #757575);
+    fill: var(--gray-icon-bg-cl, #757575);
+    transition: color var(--transition-duration) var(--transition-timing-function),
+      fill var(--transition-duration) var(--transition-timing-function);
+  
+  &--blue {
+    @include font(34px, null, 40px, null);
+    color: var(--accent-txt-cl, #2196f3);
+  }
+  
+  &:hover,
+  &:focus {
+      color: var(--accent-txt-cl, #2196f3);
+      fill: var(--accent-icon-bg-cl, #2196f3);
+    }
+  }
+
+}

@@ -943,7 +943,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .preferences {
-    padding: 90px 0;
+    padding: 94px 0;
   }
 }
 .preferences__list {
@@ -1025,7 +1025,22 @@ img {
   |==============================
 */
 .services {
-  padding-bottom: 90px;
+  padding: 94px 0;
+}
+@media screen and (max-width: 1199px) {
+  .services {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 .services__title {
   margin-bottom: 50px;
@@ -1040,11 +1055,16 @@ img {
 }
 .services__item {
   position: relative;
-  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+      flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+@media screen and (min-width: 1200px) {
+  .services__item {
+    --items: 3;
+  }
 }
 .services__subtitle {
   display: -webkit-box;
@@ -1075,12 +1095,12 @@ img {
   |==============================
 */
 .team {
-  padding: 94px 0;
+  padding: 60px 0;
   background-color: var(--team-bg-cl, #f5f4fa);
 }
 @media screen and (min-width: 768px) {
   .team {
-    padding: 60px 0;
+    padding: 94px 0;
   }
 }
 .team__title {
@@ -1152,7 +1172,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .customer {
-    padding: 90px 0;
+    padding: 94px 0;
   }
 }
 .customer__list {

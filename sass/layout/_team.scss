@@ -5,11 +5,11 @@
 */
 
 .team {
-    padding: 94px 0;
+    padding: 60px 0;
     background-color: var(--team-bg-cl, #f5f4fa);
 
     @media screen and (min-width: 768px) {
-    padding: 60px 0;    
+    padding: 94px 0;    
     }
 
     &__title {

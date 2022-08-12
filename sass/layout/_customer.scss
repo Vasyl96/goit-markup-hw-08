@@ -5,16 +5,28 @@
 */
 
 .customer {
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+        padding: 90px 0;
+        }
 
     &__list {
         @include flexbox(flex, null, center, null);
-        //  gap: 30px;
+        flex-wrap: wrap;
         gap: var(--indent);
     }
 
     &__item {
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+        @media screen and (min-width: 768px) {
+            --items: 3;
+        }
+
+        @media screen and (min-width: 768px) {
+            --items: 6;
+        }
     }
 
     &__title {

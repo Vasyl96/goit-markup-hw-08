@@ -4,7 +4,13 @@
   |==============================
 */
 
+
 .title {
-    @include font(36px, 700, 42px, 0.03em);
+
+  @include font(28px, 700, 33px, 0.03em);
     text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font(36px, null, 42px, null);
+  }
 }

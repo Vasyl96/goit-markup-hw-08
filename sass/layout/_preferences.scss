@@ -5,7 +5,11 @@
 */
 
 .preferences {
-    padding: 90px 0 90px;
+    padding: 60px 0;
+    
+    @media screen and (min-width: 1200px) {
+        padding: 90px 0;
+    }
 
     &__list {
             display: flex;
@@ -15,6 +19,18 @@
     
     &__item {
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+       
+        @media screen and (max-width: 767px) {
+                --items: 1;
+            }
+        
+        @media screen and (min-width: 768px) {
+            --items: 2;
+        }
+
+        @media screen and (min-width: 1200px) {
+            --items: 4;
+        }
     }
 
     &__box {
@@ -29,8 +45,13 @@
     }
 
     &__title {
+        text-align: center;
         @include font(14px, 700, 16px, 0.03em);
         text-transform: uppercase;
+        
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__title--bottom {
@@ -39,7 +60,10 @@
 
     &__text {
         @include font(14px, 400, 24px, 0.03em);
-        max-width: 270px;
         color: var(--gray-txt-cl, #757575);
+
+        @media screen and (min-width: 768px) {
+        max-width: 270px;    
+            }
     }
 }

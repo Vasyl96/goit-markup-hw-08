@@ -10,7 +10,7 @@
 
     &__container {
         @media screen and(min-width: 768px) {
-        @include flexbox(flex, center, space-between, null);
+        @include flexbox(flex, null, center, null);
         flex-wrap: wrap
         }
     }
@@ -19,7 +19,7 @@
 // Footer contact
 
 .footer-contacts {
-    
+
     &--bottom {
             margin-bottom: 60px;
         }
@@ -27,7 +27,8 @@
     @media screen and(min-width: 768px) {
     @include flexbox(flex, null, center, column);
         &--right {
-            margin-right: 165px;
+            margin-right: auto;
+            // margin-right: auto;
         }
     }
 
@@ -99,15 +100,23 @@
         }
     }
 
+    @media screen and (max-width: 767px) {
     &--bottom {
-        margin-bottom: 60px;
+            margin-bottom: 60px;
+        }
     }
 
+    
     &__text {
-        display: inline-block;
+        text-align: center;
+        display: block;
         @include font(14px, 700, 16px, 0.03em);
         text-transform: uppercase;
         color: var(--white-txt-cl, #ffffff);
+
+        @media screen and (min-width: 1200px) {
+                text-align: left;
+            }
     }
 
     &__text--bottom {
@@ -125,15 +134,24 @@
 }
 
 /* Footer subscription start */
-.footer-subscription__form {
-    display: flex;
+.footer-subscription__form {і
+@media screen and (min-width: 1200px) {
+        & {
+            display: flex;
+        }
+    }
 }
 
 .subscription__text {
     display: block;
+    text-align: center;
     @include font(14px, 700, 16px, 0.03em);
     text-transform: uppercase;
     color: var(--white-txt-cl, #ffffff);
+
+    @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
 
     &--bottom {
         margin-bottom: 20px;
@@ -141,13 +159,24 @@
 }
 
 .subscription-email {
-    display: flex;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    
 }
+
+@media screen and (min-width: 1200px){
+    .subscription-email {
+            display: flex;
+        }
+}
+
 
 .subscription-email__input {
     display: inline-block;
     padding-left: 20px;
-    width: 358px;
+    height: 50px;
+    width: 100%;
     background-color: inherit;
     color: var(--white-txt-cl, #ffffff);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -155,6 +184,22 @@
     border-radius: 4px;
     cursor: pointer;
     transition: border var(--transition-duration) var(--transition-timing-function);
+
+    &--bottom {
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width: 768px){
+            & {
+                width: 463px;
+            }
+        }
+
+    @media screen and (min-width: 1200px) {
+        & {
+        width: 358px;
+        }
+    }
 
     &:focus {
         outline: none;
@@ -168,10 +213,10 @@
     }
 }
 
+
 .subscription-email__btn {
     display: inline-flex;
     align-items: center;
-
     &--left {
         margin-left: 10px;
     }

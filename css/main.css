@@ -1255,38 +1255,60 @@ img {
   padding: 60px 0;
   background-color: var(--footer-hero-bg-cl, #2f303a);
 }
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.footer-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (min-width: 768px) {
+  .footer-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-contacts--right {
+    margin-right: 165px;
+  }
 }
-.footer-contacts--right {
-  margin-right: 70px;
+@media screen and (min-width: 1200px) {
+  .footer-contacts--right {
+    margin-right: 70px;
+  }
 }
 .footer-contacts__logo {
+  text-align: center;
+  display: block;
   margin-bottom: 20px;
   color: var(--white-logo-txt-cl, #ffffff);
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
+@media screen and (min-width: 1200px) {
+  .footer-contacts__logo {
+    text-align: left;
+  }
+}
 
 .address {
+  text-align: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
@@ -1311,6 +1333,11 @@ img {
 .address__link:hover, .address__link:focus {
   color: var(--accent-txt-cl, #2196f3);
   fill: var(--accent-icon-bg-cl, #2196f3);
+}
+@media screen and (min-width: 1200px) {
+  .address {
+    text-align: left;
+  }
 }
 
 .footer-social--right {

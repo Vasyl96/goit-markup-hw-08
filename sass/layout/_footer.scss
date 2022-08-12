@@ -9,29 +9,49 @@
     background-color: var(--footer-hero-bg-cl, #2f303a);
 
     &__container {
+        @media screen and(min-width: 768px) {
         @include flexbox(flex, center, space-between, null);
+        flex-wrap: wrap
+        }
     }
 }
 
 // Footer contact
 
 .footer-contacts {
-    @include flexbox(flex, null, null, column);
-
-    &--right {
-        margin-right: 70px;
+    @media screen and(min-width: 768px) {
+    @include flexbox(flex, null, center, column);
+        &--right {
+            margin-right: 165px;
+        }
     }
 
+         @media screen and(min-width: 1200px) {
+            &--right {
+                    margin-right: 70px;
+                }
+
+         }
+
+    
+
     &__logo {
+        text-align: center;
+        display: block;
         margin-bottom: 20px;
         color: var(--white-logo-txt-cl, #ffffff);
         transition: color var(--transition-duration) var(--transition-timing-function);
+        
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
     }
 }
 
 
 //  Adrdress start
 .address {
+    text-align: center;
     @include font(14px, 400, 24px, 0.03em);
     font-style: normal;
     color: var(--white-txt-cl, #ffffff);
@@ -57,12 +77,20 @@
         color: var(--accent-txt-cl, #2196f3);
         fill: var(--accent-icon-bg-cl, #2196f3);
     }
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+
+
 }
 
 
 // Footer social start
 .footer-social {
-
+    @media screen and (min-width: 1200px) {
+        
+    }
     &--right {
         margin-right: 93px;
     }

@@ -1271,6 +1271,9 @@ img {
   }
 }
 
+.footer-contacts--bottom {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer-contacts {
     display: -webkit-box;
@@ -1340,8 +1343,13 @@ img {
   }
 }
 
-.footer-social--right {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .footer-social--right {
+    margin-right: 93px;
+  }
+}
+.footer-social--bottom {
+  margin-bottom: 60px;
 }
 .footer-social__text {
   display: inline-block;

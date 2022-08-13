@@ -351,11 +351,12 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  padding: 0;
   top: 8px;
   right: 8px;
-  min-height: 30px;
+  height: 30px;
   min-width: 30px;
-  background-color: var(--white-modal-icon-bg-cl, #ffffff);
+  background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-transition: opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);

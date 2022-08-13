@@ -33,8 +33,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 528px;
-    min-height: 581px;
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+        min-width: 528px;
+        min-height: 581px;
+    }
     background-color: var(--white-modal-bg-cl, #ffffff);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -65,7 +68,7 @@
     &__text {
         display: block;
         text-align: center;
-        @include font(20px, 700, 23px, 0.03em);
+        @include font(20px, 700, 30px, 0.03em);
         color: var(--dark-main-txt-cl, #212121);
     }
 
@@ -91,7 +94,8 @@
     &__user-comment {
         display: inline-block;
         position: relative;
-        width: 448px;
+        // width: 448px;
+        width: 100%;
         cursor: pointer;
     }
 
@@ -119,7 +123,8 @@
     &__user-input {
         padding: 12px 16px 12px 42px;
         height: 40px;
-        width: 448px;
+        // width: 448px;
+        width: 100%;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         transition: border var(--transition-duration) var(--transition-timing-function);
@@ -151,7 +156,8 @@
         resize: none;
         height: 120px;
         padding: 10px 16px;
-        width: 448px;
+        width: 100%;
+        // width: 448px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         transition: border var(--transition-duration) var(--transition-timing-function);
@@ -166,7 +172,11 @@
     &__user-adreement {
         display: inline-block;
         position: relative;
+        padding-left: 25px;
+        @media screen and (min-width: 1200px) {
         padding-left: 40px;
+        }
+        
     }
 
     &__user-adreement--bottom {
@@ -175,7 +185,10 @@
 
     &__label-adreement {
         display: inline-block;
+        @include font(12px, null, 14px, null);
+        @media screen and (min-width: 1200px) {
         @include font(14px, 400, 24px, 0.03em);
+        }
         color: var(--gray-txt-cl, #757575);
     }
 
@@ -193,12 +206,17 @@
     &__label-adreement::before {
         content: '';
         position: absolute;
-        left: 15px;
-        bottom: 17%;
+        left: 0;
+        bottom: 0;
         transform: translatey(-10%);
+        @media screen and (min-width: 1200px) {
+            left: 15px;
+            bottom: 17%;
+            transform: translatey(-10%);
+        }
         display: inline-block;
         width: 16px;
-        height: 15px;
+        height: 16px;
         border: 2px solid;
         border-color: var(--dark-main-txt-cl, #212121);
         border-radius: 2px;

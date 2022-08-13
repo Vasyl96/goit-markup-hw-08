@@ -323,7 +323,8 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 100%;
+  width: 93%;
+  max-width: 528px;
   background-color: var(--white-modal-bg-cl, #ffffff);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -404,7 +405,7 @@ img {
           flex-direction: column;
 }
 .form-modal__user-name, .form-modal__user-phone, .form-modal__user-email, .form-modal__user-comment {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 100%;
   cursor: pointer;
@@ -501,7 +502,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 .form-modal__user-adreement {
-  display: inline-block;
+  display: block;
   position: relative;
   padding-left: 25px;
 }
@@ -514,7 +515,7 @@ img {
   margin-bottom: 30px;
 }
 .form-modal__label-adreement {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   color: var(--gray-txt-cl, #757575);
@@ -539,8 +540,8 @@ img {
 .form-modal__label-adreement::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 0px;
+  bottom: 17%;
   -webkit-transform: translatey(-10%);
           transform: translatey(-10%);
   display: inline-block;
@@ -553,12 +554,18 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
   cursor: pointer;
 }
+@media screen and (min-width: 455px) {
+  .form-modal__label-adreement::before {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translatey(-10%);
+            transform: translatey(-10%);
+  }
+}
 @media screen and (min-width: 1200px) {
   .form-modal__label-adreement::before {
     left: 15px;
     bottom: 17%;
-    -webkit-transform: translatey(-10%);
-            transform: translatey(-10%);
   }
 }
 .form-modal__checkbox-agreement:focus + .form-modal__label-adreement::before {

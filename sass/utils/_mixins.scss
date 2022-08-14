@@ -43,6 +43,11 @@
     }}
 
 
+// Mixin flex-basis
+@mixin flex-basis($indent, $item) {
+    flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
+}
+
 
 //Mixin for padding top and bottom
 

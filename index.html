@@ -84,16 +84,20 @@
             </ul>
             <ul class="menu-social menu-social__list">
                 <li class="menu-social__item">
-                    <a class="menu-social__link" href="https://Instagram/">Instagram</a>
+                    <a class="menu-social__link" target="_blank" rel="noopener noreferrer"
+                        href="https://Instagram/">Instagram</a>
                 </li>
                 <li class="menu-social__item">
-                    <a class="menu-social__link" href="https://www.twitter.com/">Twitter</a>
+                    <a class="menu-social__link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.twitter.com/">Twitter</a>
                 </li>
                 <li class="menu-social__item">
-                    <a class="menu-social__link" href="https://www.facebook.com/">Facebook</a>
+                    <a class="menu-social__link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.facebook.com/">Facebook</a>
                 </li>
                 <li class="menu-social__item">
-                    <a class="menu-social__link" href="https://www.linkedin.com/">Linkedin</a>
+                    <a class="menu-social__link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/">Linkedin</a>
                 </li>
             </ul>
         </div>
@@ -221,16 +225,43 @@
             <div class="container">
                 <h2 class="services__title title">Чим ми займаємося?</h2>
                 <ul class="services__list">
-                    <li class="services__item"><img class="service-img" src="./img/програмування.jpg"
-                            alt="Програмування" width="370" height="294">
+                    <li class="services__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="../img/services/1-img@1x_lg.webp 1x, ../img/services/1-img@2x_lg.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="../img/services/1-img@1x_lg.jpeg 1x, ../img/services/1-img@2x_lg.jpeg 2x"
+                                type="image/jpeg" />
+                            <img class="service-img" src="../img/services/програмування.jpg" alt="Програмування"
+                                width="370" height="294">
+                        </picture>
                         <p class="services__subtitle">Десктопні додатки</p>
                     </li>
-                    <li class="services__item"><img class="service-img" src="./img/тестування.jpg" alt="Тестування"
-                            width="370" height="294">
+                    <li class="services__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="img/services/2-img@1x_lg.webp 1x, img/services/2-img@2x_lg.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="img/services/2-img@1x_lg.jpg 1x, img/services/2-img@2x_lg.jpg 2x"
+                                type="image/jpeg">
+                            <img class="service-img" src="../img/services/тестування.jpg" alt="Тестування" width="370"
+                                height="294">
+                        </picture>
                         <p class="services__subtitle">Мобільні додатки</p>
                     </li>
-                    <li class="services__item"><img class="service-img" src="./img/дизайн.jpg" alt="Дизайн" width="370"
-                            height="294">
+                    <li class="services__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="../img/services/3-img@1x_lg.webp 1x, ../img/services/3-img@2x_lg.webp 2x "
+                                type="image/webp">
+                            <source midia="(min-width: 1200px)"
+                                srcset="../img/services/3-img@1x_lg.jpg 1x, ../img/services/3-img@2x_lg.jpg 2x"
+                                type="image/jpeg">
+                            <img class="service-img" src="../img/services/дизайн.jpg" alt="Дизайн" width="370"
+                                height="294">
+                        </picture>
                         <p class="services__subtitle">Дизайнерські рішення</p>
                     </li>
                 </ul>
@@ -242,8 +273,33 @@
                 <h2 class="team__title title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img class="team__img" src="./img/игорь-демьяненко.jpg" alt="Игорь Демьяненко" width="270"
-                            height="260">
+                        <div class="team__thumb">
+                            <picture>
+                                <!-- Mobil -->
+                                <source media="(max-width: 767px)"
+                                    srcset="../img/team/1-img@1x_sm.webp 450w, ../img/team/1-img@2x_sm.webp 900w, ../img/team/1-img@3x_sm.webp 1350w"
+                                    type="image/webp" sizes="(max-width: 767px) 450px, 100vw">
+                                <source media="(max-width: 767px)"
+                                    srcset="../img/team/1-img@1x_sm.jpg 450w, ../img/team/1-img@2x_sm.jpg 900w, ../img/team/1-img@3x_sm.jpg 1350w"
+                                    type="image/jpg" sizes="(max-width: 767px) 450px, 100vw">
+                                <!-- Table -->
+                                <source media="(min-width: 768px)"
+                                    srcset="../img/team/1-img@1x_sm.webp 450w, ../img/team/1-img@2x_sm.webp 900w, ../img/team/1-img@3x_sm.webp 1350w"
+                                    type="image/webp" sizes="(max-width: 768px) 50vw, 100vw">
+                                <source media="(max-width: 767px)"
+                                    srcset="../img/team/1-img@1x_sm.jpg 450w, ../img/team/1-img@2x_sm.jpg 900w, ../img/team/1-img@3x_sm.jpg 1350w"
+                                    type="image/jpg" sizes="(max-width: 768px) 50vw, 100vw">
+                                <!-- Laptop -->
+                                <source media="(max-width: 1200px)"
+                                    srcset="../img/team/1-img@1x_sm.webp 450w, ../img/team/1-img@2x_sm.webp 900w, ../img/team/1-img@3x_sm.webp 1350w"
+                                    type="image/webp" sizes="(max-width: 1200px) 25vw, 50vw, 100vw">
+                                <source media="(max-width: 1200px)"
+                                    srcset="../img/team/1-img@1x_sm.jpg 450w, ../img/team/1-img@2x_sm.jpg 900w, ../img/team/1-img@3x_sm.jpg 1350w"
+                                    type="image/jpg" sizes="(max-width: 1200px) 25vw, 50vw, 100vw">
+                                <img class="team__img" src="../img/team/игорь-демьяненко.jpg" alt="Игорь Демьяненко"
+                                    width="270" height="260">
+                            </picture>
+                        </div>
                         <div class="team__contact">
                             <h3 class="team__subtitle team__subtitle--bottom">Игорь Демьяненко</h3>
                             <p lang="en" class="team__text team__text--bottom">Product Designer</p>
@@ -268,7 +324,14 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__img" src="./img/ольга-репина.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture>
+                            <source srcset="../img/team/2-img@1x_sm.webp 1x, ../img/team/2-img@2x_sm.webp 2x"
+                                type="image/webp">
+                            <source srcset="../img/team/2-img@1x_sm.jpg 1x, ../img/team/2-img@2x_sm.jpg 2x"
+                                type="image/jpg">
+                            <img class="team__img" src="../img/team/ольга-репина.jpg" alt="Ольга Репина" width="270"
+                                height="260">
+                        </picture>
                         <div class="team__contact">
                             <h3 class="team__subtitle team__subtitle--bottom">Ольга Репина</h3>
                             <p lang="en" class="team__text team__text--bottom">Frontend Developer</p>
@@ -293,7 +356,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__img" src="./img/николай-тарасов.jpg" alt="Николай Тарасов" width="270"
+                        <img class="team__img" src="../img/team/николай-тарасов.jpg" alt="Николай Тарасов" width="270"
                             height="260">
                         <div class="team__contact">
                             <h3 class="team__subtitle team__subtitle--bottom">Николай Тарасов</h3>
@@ -319,7 +382,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__img" src="./img/михаил-ермаков.jpg" alt="Михаил Ермаков" width="270"
+                        <img class="team__img" src="../img/team/михаил-ермаков.jpg" alt="Михаил Ермаков" width="270"
                             height="260">
                         <div class="team__contact">
                             <h3 class="team__subtitle team__subtitle--bottom">Михаил Ермаков</h3>

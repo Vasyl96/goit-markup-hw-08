@@ -9,21 +9,63 @@
     padding: 118px 0;
     max-width: 480px;
     height: 400px;
+    text-align: center;
+    background-color: var(--footer-hero-bg-cl, #2f303a);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media screen and (min-width: 768px) {
-            max-width: 768px;
-        }
+        max-width: 768px;
+    
+    }
     
     @media screen and (min-width: 1200px) {
-            padding: 200px 0;
-            max-width: 1600px;
-            height: 600px;
-        }
-    text-align: center;
+        padding: 200px 0;
+        max-width: 1600px;
+        height: 600px;
+    }
+
+    // Mobil img banner
     background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
-            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))),
-        url(../img/img-banner.jpg);
-    background-color: var(--footer-hero-bg-cl, #2f303a);
+        var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_sm.jpg");
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+        var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
+    
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/hero/hero@1x_sm.jpg");
+        background-image: -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
+    }
+    
+
+    // Tablet img banner
+    @media screen and (min-width: 768px) {
+        background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
+        background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 1x);
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url("../img/hero/hero@1x_md.jpg");
+            background-image: -webkit-image-set(url("../img/hero/hero@2x_md.webp") 2x);
+            }
+    }
+
+    // Laptop img banner
+    @media screen and (min-width: 1200px) {
+        background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
+        background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+            var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 1x);
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url("../img/hero/hero@1x_lg.jpg");
+            background-image: -webkit-image-set(url("../img/hero/hero@2x_lg.webp") 2x);
+        }
+    }
+
+
+// Button and title
 
     &__title {
         margin: 0 auto 0;

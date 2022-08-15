@@ -92,10 +92,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 /*
@@ -1198,7 +1194,7 @@ img {
   }
 }
 .team__img {
-  width: 450px;
+  width: 100%;
 }
 .team__title {
   margin-bottom: 50px;
@@ -1426,8 +1422,12 @@ img {
 }
 .portfolio__thumb {
   position: relative;
-  height: 294px;
+  height: auto;
+  max-width: 100vw;
   overflow: hidden;
+}
+.portfolio__img {
+  width: 100%;
 }
 .portfolio__link:hover .overlay {
   -webkit-transform: translatey(0);

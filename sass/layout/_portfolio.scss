@@ -46,7 +46,7 @@
         padding: 15px 15px;
         @include font(14px, 400, 28px, 0.03em);
 
-        @media screen and (min-width: 380px) {
+        @media screen and (min-width: 360px) {
             padding: 30px 24px;
             @include font(17px, 400, 28px, 0.03em);
         }

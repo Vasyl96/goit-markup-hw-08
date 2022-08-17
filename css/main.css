@@ -158,16 +158,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .nav__logo {
   padding-top: 16px;
   padding-bottom: 16px;
+  margin-right: auto;
 }
 @media screen and (max-width: 767px) {
-  .nav__list {
+  .nav__list .nav__item {
     display: none;
   }
 }
@@ -940,38 +938,31 @@ img {
 */
 .hero {
   margin: 0 auto;
+  max-width: 1600px;
+  min-height: 400px;
   padding: 118px 0;
-  max-width: 480px;
-  height: 400px;
   text-align: center;
   background-color: var(--footer-hero-bg-cl, #2f303a);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_sm.jpg");
-  background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_sm.jpg");
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
-  background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
   .hero {
-    max-width: 768px;
+    max-height: 400px;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_sm.jpg");
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_sm.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
   }
 }
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
-  }
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../img/hero/hero@1x_sm.jpg");
     background-image: -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .hero {
     background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_md.jpg");
     background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
@@ -979,21 +970,23 @@ img {
     background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 1x);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../img/hero/hero@1x_md.jpg");
     background-image: -webkit-image-set(url("../img/hero/hero@2x_md.webp") 2x);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero {
+    max-height: 600px;
+    padding: 200px 0;
     background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_lg.jpg");
     background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
     background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 1x);
     background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 1x);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../img/hero/hero@1x_lg.jpg");
     background-image: -webkit-image-set(url("../img/hero/hero@2x_lg.webp") 2x);
@@ -1009,7 +1002,7 @@ img {
   text-transform: uppercase;
   color: var(--white-txt-cl, #ffffff);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
@@ -1283,12 +1276,17 @@ img {
   -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
       flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
+@media screen and (min-width: 480px) {
+  .customer__item {
+    --items: 2;
+  }
+}
 @media screen and (min-width: 768px) {
   .customer__item {
     --items: 3;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .customer__item {
     --items: 6;
   }
@@ -1306,13 +1304,23 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   fill: var(--silver-icon-bg-cl, #afb1b8);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   -webkit-transition: border var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
   transition: border var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
+}
+@media screen and (min-width: 768px) {
+  .customer__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer__link {
+    width: 170px;
+  }
 }
 .customer__link:hover, .customer__link:focus {
   border: 1px solid #2196f3;
@@ -1397,13 +1405,11 @@ img {
   gap: var(--indent);
 }
 .portfolio__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
       flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
-@media screen and (min-width: 767px) and (max-width: 1199px) {
-  .portfolio__item:first-child .portfolio__project {
-    height: 147px;
-  }
 }
 @media screen and (max-width: 767px) {
   .portfolio__item {
@@ -1465,7 +1471,16 @@ img {
   color: var(--dark-main-txt-cl, #212121);
 }
 .portfolio__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
@@ -1512,7 +1527,7 @@ img {
             flex-direction: column;
   }
   .footer-contacts--right {
-    margin-right: auto;
+    margin-right: 165px;
   }
 }
 @media screen and (min-width: 1200px) {

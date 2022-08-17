@@ -64,12 +64,7 @@
     }
 
     &__item {
-        &:first-child .portfolio__project {
-            @media screen and (min-width: 767px) and (max-width: 1199px) {
-                        height: 147px;        
-                }
-        }
-
+        display: flex;
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
         @media screen and (max-width: 767px) {
@@ -130,7 +125,8 @@
     }
 
     &__link {
-        display: block;
+        @include flexbox(flex, null, null, column);
+        flex-grow: 1;
         text-decoration: none;
         transition: box-shadow var(--transition-duration) var(--transition-timing-function);
     }

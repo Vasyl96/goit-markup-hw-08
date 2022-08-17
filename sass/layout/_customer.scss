@@ -19,12 +19,16 @@
 
     &__item {
         flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
+        
+        @media screen and (min-width: 480px) {
+                --items: 2;
+            }
+        
         @media screen and (min-width: 768px) {
             --items: 3;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1200px) {
             --items: 6;
         }
     }
@@ -35,7 +39,13 @@
 
     &__link {
         @include flexbox(flex, center, center, null);
-        width: 170px;
+        @media screen and (min-width: 768px) {
+            width: 226px;
+            }
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+        width: 210px;   
         height: 92px;
         fill: var(--silver-icon-bg-cl, #afb1b8);
         border: 1px solid #afb1b8;

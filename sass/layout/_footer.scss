@@ -27,7 +27,7 @@
     @media screen and(min-width: 768px) {
     @include flexbox(flex, null, center, column);
         &--right {
-            margin-right: auto;
+            margin-right: 165px;
             // margin-right: auto;
         }
     }

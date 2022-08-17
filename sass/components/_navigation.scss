@@ -5,14 +5,15 @@
 */
 
 .nav {
-    @include flexbox(flex, center, space-between, null);
+    @include flexbox(flex, center, null, null);
 
     &__logo {
         @include padding (16px);
+        margin-right: auto;
     }
 
     @media screen and (max-width: 767px) {
-        &__list {
+        &__list &__item {
         display: none;
         }
     }

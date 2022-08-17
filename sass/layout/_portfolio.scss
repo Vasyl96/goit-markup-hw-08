@@ -43,8 +43,18 @@
         background-color var(--transition-duration) var(--transition-timing-function);
 
     &__text {
-        padding: 63px 24px;
-        @include font(18px, 400, 28px, 0.03em);
+        padding: 15px 15px;
+        @include font(14px, 400, 28px, 0.03em);
+
+        @media screen and (min-width: 380px) {
+            padding: 30px 24px;
+            @include font(17px, 400, 28px, 0.03em);
+        }
+        @media screen and (min-width: 480px) {
+            padding: 63px 24px;
+            @include font(18px, 400, 28px, 0.03em);
+            }
+        
         color: var(--white-txt-cl, #ffffff);
     }
 }

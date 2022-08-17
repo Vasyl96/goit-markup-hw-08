@@ -312,17 +312,20 @@ img {
   -webkit-transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
   transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
 }
+@media screen and (max-width: 480px) {
+  .backdrop {
+    padding: 93px 15px;
+    overflow-y: scroll;
+  }
+}
 
 .modal {
   padding: 40px;
-  position: absolute;
   z-index: 10;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 93%;
-  max-width: 528px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
   background-color: var(--white-modal-bg-cl, #ffffff);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -331,6 +334,16 @@ img {
   transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+@media screen and (min-width: 481px) {
+  .modal {
+    position: absolute;
+    width: 93%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -373,14 +386,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--dark-main-txt-cl, #212121);
-}
-@media screen and (max-width: 479px) {
-  .modal__text {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.67;
-    letter-spacing: 0.03em;
-  }
 }
 .modal__text--bottom {
   margin-bottom: 12px;
@@ -1388,12 +1393,30 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
 .overlay__text {
-  padding: 63px 24px;
-  font-size: 18px;
+  padding: 15px 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.56;
+  line-height: 2;
   letter-spacing: 0.03em;
   color: var(--white-txt-cl, #ffffff);
+}
+@media screen and (min-width: 380px) {
+  .overlay__text {
+    padding: 30px 24px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 480px) {
+  .overlay__text {
+    padding: 63px 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+  }
 }
 
 .portfolio {

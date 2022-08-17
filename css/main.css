@@ -374,6 +374,14 @@ img {
   letter-spacing: 0.03em;
   color: var(--dark-main-txt-cl, #212121);
 }
+@media screen and (max-width: 479px) {
+  .modal__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.67;
+    letter-spacing: 0.03em;
+  }
+}
 .modal__text--bottom {
   margin-bottom: 12px;
 }

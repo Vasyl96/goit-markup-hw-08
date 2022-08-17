@@ -70,6 +70,9 @@
     &__text {
         display: block;
         text-align: center;
+        @media screen and (max-width: 479px) {
+        @include font(18px, 700, 30px, 0.03em);
+        }
         @include font(20px, 700, 30px, 0.03em);
         color: var(--dark-main-txt-cl, #212121);
     }

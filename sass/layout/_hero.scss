@@ -37,12 +37,18 @@
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
         background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 1x);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
                 var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
             background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
                 var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 2x);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             }  
     }
 
@@ -54,12 +60,18 @@
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
         background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 1x);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
                 var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
             background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
                 var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 2x);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 

@@ -996,8 +996,10 @@ img {
 }
 @media screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/hero/hero@1x_sm.jpg");
-    background-image: -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@2x_sm.jpg");
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@2x_sm.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
   }
 }
 @media screen and (min-width: 480px) {
@@ -1010,8 +1012,10 @@ img {
 }
 @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/hero/hero@1x_md.jpg");
-    background-image: -webkit-image-set(url("../img/hero/hero@2x_md.webp") 2x);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_md.jpg");
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 2x);
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 2x);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1026,8 +1030,10 @@ img {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../img/hero/hero@1x_lg.jpg");
-    background-image: -webkit-image-set(url("../img/hero/hero@2x_lg.webp") 2x);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), url("../img/hero/hero@1x_lg.jpg");
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), to(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 2x);
+    background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)), var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 2x);
   }
 }
 .hero__title {
@@ -1506,6 +1512,9 @@ img {
   transition: box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .portfolio__project {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;

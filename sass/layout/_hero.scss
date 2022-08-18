@@ -24,8 +24,10 @@
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_sm.webp") 1x);
         
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../img/hero/hero@1x_sm.jpg");
-            background-image: -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@2x_sm.jpg");
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@2x_sm.webp") 2x);
         }
     }
 
@@ -37,8 +39,10 @@
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 1x);
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../img/hero/hero@1x_md.jpg");
-            background-image: -webkit-image-set(url("../img/hero/hero@2x_md.webp") 2x);
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_md.jpg");
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_md.webp") 2x);
             }  
     }
 
@@ -52,8 +56,10 @@
             var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 1x);
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url("../img/hero/hero@1x_lg.jpg");
-            background-image: -webkit-image-set(url("../img/hero/hero@2x_lg.webp") 2x);
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), url("../img/hero/hero@1x_lg.jpg");
+            background: linear-gradient(var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4)),
+                var(--hero-lg-bg-cl, rgba(47, 48, 58, 0.4))), -webkit-image-set(url("../img/hero/hero@1x_lg.webp") 2x);
         }
     }
 
